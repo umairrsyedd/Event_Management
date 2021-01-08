@@ -3,8 +3,8 @@ def createEvent(mycursor, mydb):
     Event_Name = input("Enter Event Name :  ")
     Start_Time = input("Enter Start Time (HH-MM-SS) :  ")
     End_Time = input("Enter End Time (HH-MM-SS) :  ")
-    Client_ID = 123
-    Venue_ID = 456
+    Client_ID = 3
+    Venue_ID = 2
     status = input(
         "Enter Event Status (0 or 1) (1 - OnSchedule , 0 - Cancelled) :  ")
     mycursor.execute(
