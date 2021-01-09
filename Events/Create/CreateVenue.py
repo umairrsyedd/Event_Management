@@ -1,5 +1,6 @@
 def createVenue(mycursor, mydb):
     Venue_Name = input("Enter Venue Name  ")
+    Venue_Name = Venue_Name.upper()
     Owner_Name = input("Enter Name Of Owner  ")
     Owner_Number = input("Enter Owner Number  ")
     Price = input("Enter Price Of Venue  ")
