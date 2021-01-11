@@ -5,3 +5,4 @@ def createClient(mycursor, mydb):
     mycursor.execute(
         f'insert into Clients(Name, Phone, email) values("{Client_Name}",{Client_Number}, "{Client_Email}")')
     mydb.commit()
+    print("New Client Created Successfully\n")
