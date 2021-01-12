@@ -4,26 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Client</title>
+    <title>Create Event</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-</head>
+    <link rel="stylesheet" href="../static/styles/dtsel.css">
+    </head>
 
 <body>
     <div class="container">
-        <h1 class="text-center mb-3">Create Venue</h1>
-        <form class="position-absolute top-50 start-50 translate-middle">
+        <h1 class="text-center mb-3">Create Event</h1>
+        <form class="position-absolute top-50 start-50 translate-middle" autocomplete="off">
             <div class="mb-2">
-                <label for="exampleInputName" class="form-label">Venue Name</label>
+                <label for="exampleInputName" class="form-label">Date Of Event</label>
+                <input name="dateTimePicker" class="form-control">
+            </div>
+            <div class="mb-2">
+                <label for="exampleInputName" class="form-label">Event Name</label>
                 <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             <div class="mb-2">
-                <label for="exampleInputName" class="form-label">Owner Name</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <label for="exampleInputName" class="form-label">Event Start Time</label>
+                <input name="TimePicker" class="form-control">
             </div>
             <div class="mb-2">
-                <label for="exampleInputPassword1" class="form-label"> Owner Phone Number</label>
-                <input type="tel" class="form-control" id="exampleInputPassword1">
+                <label for="exampleInputName" class="form-label">Event End Time</label>
+                <input name="TimePicker2" class="form-control">
             </div>
             <div class="mb-2">
                 <label for="exampleInputName" class="form-label">Price Of Venue </label>
@@ -39,6 +44,25 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous"></script>
+        <script src="../static/scripts/dtsel.js"></script>
+        <script>
+                instance = new dtsel.DTS('input[name="dateTimePicker"]', {
+                        showTime: false,
+                        dateFormat: "yyyy-mm-dd",
+                        showDate: true
+                    });
+                instance2 = new dtsel.DTS('input[name="TimePicker"]', {
+                        showTime: true,
+                        showDate: false,
+                        timeFormat: "hh-mm-ss"
+                    })
+                instance3 = new dtsel.DTS('input[name="TimePicker2"]', {
+                            showTime: true,
+                            showDate: false,
+                            timeFormat: "hh-mm-ss"
+                        })
+                    
+        </script>
 </body>
 
 </html>
